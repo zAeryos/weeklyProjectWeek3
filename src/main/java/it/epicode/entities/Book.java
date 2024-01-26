@@ -7,7 +7,6 @@ import jakarta.persistence.Entity;
 @Entity
 @DiscriminatorValue("book")
 public class Book extends CatalogElement {
-    @Column(nullable = false)
     private String author;
     private String genre;
 
@@ -15,6 +14,9 @@ public class Book extends CatalogElement {
         super(title, publicationYear, pageCount);
         this.author = author;
         this.genre  = genre;
+    }
+
+    public Book() {
     }
 
     public void setAuthor(String author) {
@@ -36,12 +38,12 @@ public class Book extends CatalogElement {
     @Override
     public String toString() {
         return "Book{" +
-                "  title='"             + getTitle() + '\'' +
-                ", publicationYear='"   + getPublicationYear() + '\'' +
-                ", pageCount='"         + getPageCount() + '\'' +
-                ", author='"            + author + '\'' +
-                ", genre='"             + genre + '\'' +
-                ", ISBN='"              + getIsbn() + '\'' +
-                '}';
+                "title='" + getTitle() + " " + '\'' +
+                "publicationYear='" + getPublicationYear() + " " + '\'' +
+                "pageCount='" + getPageCount() + " " +'\'' +
+                "author='" + author + " " +'\'' +
+                "genre='" + genre + " " +'\'' +
+                "ISBN='" + getIsbn() + " " +'\'' +
+                "}\n";
     }
 }

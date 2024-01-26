@@ -61,13 +61,6 @@ public abstract class CatalogElement {
         this.loan = loan;
     }
 
-//    public Long randomISBN() {
-//        Long minLimit       = 100000000000L;
-//        Long maxLimit       = 999999999999L;
-//        Long generatedLong  = minLimit + (long) (Math.random() * (maxLimit - minLimit));
-//        return generatedLong;
-//    }
-
     @Override
     public String toString() {
         return "Catalog{" +

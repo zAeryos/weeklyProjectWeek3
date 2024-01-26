@@ -16,6 +16,9 @@ public class Magazine extends CatalogElement {
         this.periodicity = periodicity;
     }
 
+    public Magazine() {
+    }
+
     public void setPeriodicity(Periodicity periodicity) {
         this.periodicity = periodicity;
     }
@@ -27,11 +30,11 @@ public class Magazine extends CatalogElement {
     @Override
     public String toString() {
         return "Magazine{" +
-                "  title='"             + getTitle() + '\'' +
-                ", publicationYear='"   + getPublicationYear() + '\'' +
-                ", pageCount='"         + getPageCount() + '\'' +
-                "  periodicity="        + periodicity +
-                ", ISBN='"              + getIsbn() + '\'' +
-                '}';
+                "title='" + getTitle() + " " +'\'' +
+                "publicationYear='" + getPublicationYear() + " " +'\'' +
+                "pageCount='" + getPageCount() + " " +'\'' +
+                "periodicity=" + periodicity + " " +
+                "ISBN='" + getIsbn() + " " + '\'' +
+                "}\n";
     }
 }
